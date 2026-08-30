@@ -20,7 +20,16 @@
         </tr>
       </thead>
       <tbody id="card-table-body">
-        <!-- rows get added here by JavaScript -->
+        <td>
+          <input
+            type="number"
+            class="price-input"
+            value="${priceLine.primaryValue.toFixed(1)}"
+          />
+        </td>
+        <td class="stack-cost-cell">${stackCost.toFixed(1)}</td>
+        <td>${rewardValue.toFixed(1)}</td>
+        <td class="profit-cell">${profit.toFixed(1)}</td>
       </tbody>
     </table>
 
