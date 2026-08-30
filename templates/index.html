@@ -3,7 +3,13 @@
 <head>
     <title>PoE Calculator</title>
 </head>
+
 <body>
     <h1>Divine to Chaos Converter</h1>
+    <input type="number" id="divine-amount" value="1"> 
+    <button id="convert-button">Convert</button>
+    <p id="result"></p>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
