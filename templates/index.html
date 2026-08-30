@@ -1,15 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
     <title>PoE Calculator</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Divine to Chaos Converter</h1>
-    <input type="number" id="divine-amount" value="1"> 
+    <input type="number" id="divine-amount" value="1" />
     <button id="convert-button">Convert</button>
     <p id="result"></p>
+    <table id="card-table">
+      <thead>
+        <tr>
+          <th>Card</th>
+          <th>Price (ea)</th>
+          <th>Stack Cost</th>
+          <th>Reward Value</th>
+          <th>Profit</th>
+        </tr>
+      </thead>
+      <tbody id="card-table-body">
+        <!-- rows get added here by JavaScript -->
+      </tbody>
+    </table>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
-</body>
+  </body>
 </html>
