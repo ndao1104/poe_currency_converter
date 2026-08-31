@@ -86,7 +86,7 @@ function fetchCards() {
 convertButton.addEventListener("click", function () {
   const chao =
     Number(document.getElementById("divine-amount").value) *
-    divineToChao.chaosEquivalent;
+    divineToChao.chaosEquivalent.toFixed(0);
   document.getElementById("result").textContent = `${chao} Chaos Orbs`;
 });
 
