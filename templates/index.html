@@ -1,38 +1,45 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 <!doctype html>
 <html>
-  <head>
-    <title>PoE Calculator</title>
-  </head>
 
-  <body>
+<head>
+  <title>PoE Calculator</title>
+</head>
+
+<body>
+  <div class="container">
     <h1>Divine to Chaos Converter</h1>
     <input type="number" id="divine-amount" value="1" />
-    <button id="convert-button">Convert</button>
+    <button id="convert-button">Convert divines to chaos</button>
     <p id="result"></p>
+
+    <button id="fetch-leagues-button">Fetch Leagues from poeninja api</button>
+    <p id="league-result"></p>
+    <button id="fetch-currency-button">Fetch currency from poeninja api</button>
+    <p id="currency-result"></p>
+    <button id="fetch-cards-button" disabled>Fetch cards from poeninja api</button>
+    <p id="fetch-status"></p>
+
     <table id="card-table">
       <thead>
         <tr>
           <th>Card</th>
           <th>Price (ea)</th>
+          <th>Stack Size</th>
+          <th>Reward Divines</th>
           <th>Stack Cost</th>
           <th>Reward Value</th>
           <th>Profit</th>
         </tr>
       </thead>
       <tbody id="card-table-body">
-        <td>
-          <input
-            type="number"
-            class="price-input"
-            value="${priceLine.primaryValue.toFixed(1)}"
-          />
-        </td>
-        <td class="stack-cost-cell">${stackCost.toFixed(1)}</td>
-        <td>${rewardValue.toFixed(1)}</td>
-        <td class="profit-cell">${profit.toFixed(1)}</td>
+        <!-- script.js will fill these cells with values  -->
       </tbody>
     </table>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
-  </body>
+  </div>
+
+</body>
+
 </html>
