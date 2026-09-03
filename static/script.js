@@ -93,4 +93,3 @@ convertButton.addEventListener("click", function () {
 document.getElementById("fetch-leagues-button").addEventListener("click", fetchLeagues);
 document.getElementById("fetch-currency-button").addEventListener("click", fetchCurrency);
 document.getElementById("fetch-cards-button").addEventListener("click", fetchCards);
-
